@@ -9,6 +9,8 @@ import 'hammerjs';
 
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { EbooksService } from "./shared/services/ebooks.service";
 
 import { AppComponent } from './containers/app.component';
@@ -19,6 +21,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 
 import { LanguageSwitcherComponent } from './components/language-switcher/language-switcher.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
+import { EbookComponent } from './containers/ebooks/components/ebook/ebook.component';
+import { EbookListComponent } from './containers/ebooks/components/ebook-list/ebook-list.component';
+import { EbookDetailsComponent } from './containers/ebooks/components/ebook-details/ebook-details.component';
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -32,7 +37,10 @@ export function createTranslateLoader(http: Http) {
     EbooksComponent,
     PageNotFoundComponent,
     LanguageSwitcherComponent,
-    SideNavComponent
+    SideNavComponent,
+    EbookComponent,
+    EbookListComponent,
+    EbookDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +52,8 @@ export function createTranslateLoader(http: Http) {
       provide: TranslateLoader,
       useFactory: (createTranslateLoader),
       deps: [Http]
-    })
+    }),
+    FlexLayoutModule.forRoot()
   ],
   providers: [
       EbooksService

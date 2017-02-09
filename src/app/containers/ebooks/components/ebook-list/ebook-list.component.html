@@ -1,0 +1,27 @@
+<div class="flex-container"
+     fxLayout="row"
+     fxLayout.xs="column"
+     fxLayoutAlign="start"
+     fxLayoutAlign.xs="start">
+
+  <div class="flex-item" fxFlex="40%" fxFlex.xs="100%">
+
+    <md-card>
+      <md-card-content>
+        <p>Ebooks</p>
+        <md-nav-list dense>
+          <app-ebook *ngFor="let ebook of ebooks" (click)="getDetails(ebook)" [ebook]="ebook"></app-ebook>
+        </md-nav-list>
+      </md-card-content>
+    </md-card>
+
+  </div>
+  <div class="flex-item" fxFlex="10px"></div>
+
+  <div class="flex-item" fxFlex *ngIf="ebook">
+
+        <app-ebook-details  [ebook]="ebook"></app-ebook-details>
+
+  </div>
+
+</div>

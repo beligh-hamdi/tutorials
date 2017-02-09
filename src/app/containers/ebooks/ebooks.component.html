@@ -1,8 +1,1 @@
-<md-card class="example-card" *ngFor="let ebook of ebooks">
-  <img md-card-image [src]="ebook.img">
-  <md-card-content>
-    <p><a [href]="ebook.link" target="_blank">{{ebook.title}}</a></p>
-    <p>{{ebook.description}}</p>
-  </md-card-content>
-</md-card>
-
+<app-ebook-list [ebooks]="ebooks"></app-ebook-list>
