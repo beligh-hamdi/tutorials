@@ -1,0 +1,3 @@
+<md-nav-list>
+  <a md-list-item *ngFor="let link of links" routerLink="{{link.path}}" routerLinkActive="active">{{ link.title | translate }}</a>
+</md-nav-list>

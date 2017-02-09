@@ -1,0 +1,6 @@
+<button md-icon-button (click)="switchLanguage('fr')" [disabled]="isCurrentLanguage('fr')">
+  <md-icon [svgIcon]="'flag-fr'" [ngClass]="{'app-icon-disable': !isCurrentLanguage('fr')}"></md-icon>
+</button>
+<button md-icon-button (click)="switchLanguage('en')" [disabled]="isCurrentLanguage('en')">
+  <md-icon [svgIcon]="'flag-gb'" [ngClass]="{'app-icon-disable': !isCurrentLanguage('en')}"></md-icon>
+</button>

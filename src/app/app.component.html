@@ -1,22 +1,16 @@
 <md-sidenav-layout>
+
   <md-sidenav mode="side" #sidenav id="app-sidenav">
-
-    <md-nav-list>
-      <a md-list-item *ngFor="let link of links" routerLink="{{link.path}}" routerLinkActive="active">{{ link.title | translate }}</a>
-    </md-nav-list>
-
+   <app-side-nav [links]="links"></app-side-nav>
   </md-sidenav>
+
   <md-toolbar color="primary">
     <button md-icon-button (click)="sidenav.toggle()">
       <i class="material-icons app-toolbar-menu">menu</i>
     </button>
     <span class="app-title">{{title}}</span>
     <span class="spacer"></span>
-
-    <button *ngFor="let language of languages" md-icon-button (click)="switchLanguage(language.name)" [disabled]="isCurrentLanguage(language.name)">
-      <i class="flag-icon flag-icon-{{language.icon}}" [ngClass]="{'app-icon-disable': !isCurrentLanguage(language.name)}"></i>
-    </button>
-
+    <app-language-switcher></app-language-switcher>
   </md-toolbar>
 
   <div id="app-content">

@@ -16,6 +16,8 @@ import { AboutComponent } from './about/about.component';
 import { EbooksComponent } from './ebooks/ebooks.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {EbooksService} from "./shared/services/ebooks.service";
+import { LanguageSwitcherComponent } from './components/language-switcher/language-switcher.component';
+import { SideNavComponent } from './components/side-nav/side-nav.component';
 
 
 export function createTranslateLoader(http: Http) {
@@ -28,7 +30,9 @@ export function createTranslateLoader(http: Http) {
     HomeComponent,
     AboutComponent,
     EbooksComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LanguageSwitcherComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,

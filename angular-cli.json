@@ -18,7 +18,6 @@
       "tsconfig": "tsconfig.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/flag-icon-css/css/flag-icon.css",
         "theme.scss",
         "styles.css"
       ],
