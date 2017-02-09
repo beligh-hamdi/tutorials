@@ -9,7 +9,6 @@ export class AppComponent implements OnInit {
   title:string;
   links:Array<any>;
 
-  constructor() {}
 
   ngOnInit() {
     this.title = 'Tutorials App';
@@ -21,4 +20,6 @@ export class AppComponent implements OnInit {
     ];
 
   }
+
+
 }

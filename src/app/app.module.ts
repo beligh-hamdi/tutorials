@@ -10,6 +10,10 @@ import 'hammerjs';
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
+import { counterReducer } from './shared/reducers';
 
 import { EbooksService } from "./shared/services/ebooks.service";
 
@@ -53,7 +57,11 @@ export function createTranslateLoader(http: Http) {
       useFactory: (createTranslateLoader),
       deps: [Http]
     }),
-    FlexLayoutModule.forRoot()
+    FlexLayoutModule.forRoot(),
+    StoreModule.provideStore({ counter: counterReducer }),
+    StoreDevtoolsModule.instrumentOnlyWithExtension({
+      maxAge: 5
+    })
   ],
   providers: [
       EbooksService

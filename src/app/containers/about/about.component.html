@@ -3,3 +3,16 @@
     <p>About</p>
   </md-card-content>
 </md-card>
+
+<md-card>
+  <md-card-content>
+    <div>Current Count: {{ counter | async }}</div>
+    <br/>
+    <button md-raised-button (click)="increment()">+</button>
+    <button md-raised-button (click)="decrement()">-</button>
+    <button md-raised-button (click)="reset()">Reset</button>
+
+    <md-progress-spinner [value]="counter| async "></md-progress-spinner>
+
+  </md-card-content>
+</md-card>
