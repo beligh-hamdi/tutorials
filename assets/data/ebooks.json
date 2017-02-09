@@ -1,0 +1,22 @@
+{
+  "ebooks": [
+    {
+      "title": "Cors In Action",
+      "link": "assets/data/ebooks/Cors In Action/Cors In Action.pdf",
+      "img": "assets/data/ebooks/Cors In Action/Cors In Action.jpg",
+      "description": "CORS in Action: Creating and consuming cross-origin APIs 1st Edition"
+    },
+    {
+      "title": "Design Patterns Explained Simply",
+      "link": "assets/data/ebooks/Design Patterns Explained Simply/Design Patterns Explained Simply.pdf",
+      "img": "assets/data/ebooks/Design Patterns Explained Simply/Design Patterns Explained Simply.jpg",
+      "description": "Design Patterns Explained: A New Perspective on Object Oriented Design, 2nd Edition (Software Patterns) 2nd Edition"
+    },
+    {
+      "title": "Head First Design Patterns",
+      "link": "assets/data/ebooks/Head First Design Patterns/Head First Design Patterns.pdf",
+      "img": "assets/data/ebooks/Head First Design Patterns/Head First Design Patterns.jpg",
+      "description": "Head First Design Patterns: A Brain-Friendly Guide 1st Edition"
+    }
+  ]
+}
