@@ -1,42 +1,22 @@
 import { Injectable } from '@angular/core';
-import {Http, Response, Headers, RequestOptions} from '@angular/http';
+import {Http, Response} from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
+import {Ebook} from "../models/ebook";
 
 @Injectable()
 export class EbooksService {
 
   apiPath: string = 'assets/data/ebooks.json';
 
-
   constructor(private http:Http) { }
 
-
-  getAll(): Observable<any>{
+  getAll(): Observable<Array<Ebook>>{
     return this.http.get(`${this.apiPath}`)
-        .map((res: Response) => res.json())
+        .map((res: Response) => res.json().ebooks)
         .catch(this.handleError);
   }
-
-  add(ebook) {
-    let headers = new Headers({ 'Content-Type': 'application/json' });
-    let options = new RequestOptions({ headers: headers });
-    let body = JSON.stringify(ebook);
-    return this.http.post('/api/food/', body, headers).map((res: Response) => res.json());
-  }
-
-  update(ebook, ebook_id) {
-    let headers = new Headers({ 'Content-Type': 'application/json' });
-    let options = new RequestOptions({ headers: headers });
-    let body = JSON.stringify(ebook);
-    return this.http.put(`${this.apiPath}/ebook_id` , body, headers).map((res: Response) => res.json());
-  }
-
-  remove(ebook_id) {
-    return this.http.delete(`${this.apiPath}/ebook_id` + ebook_id);
-  }
-
 
   private handleError (error: Response | any) {
     // In a real world app, we might use a remote logging infrastructure
