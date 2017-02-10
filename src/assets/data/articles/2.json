@@ -1,0 +1,8 @@
+{
+  "id": 2,
+  "title": "AngularJS",
+  "categories": ["Web", "JavaScript"],
+  "img": "assets/data/articles/2.jpg",
+  "description": "AngularJS",
+  "body": "Font Awesome Icons  http://fontawesome.io/ <br>Google Material Design Icons https://material.io/icons/ <br>Bootstrap Icons bootstrap.com  <br>"
+}

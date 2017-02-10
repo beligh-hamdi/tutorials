@@ -1,0 +1,8 @@
+<div *ngIf="articles">
+  <app-article-list [articles]="articles" (articleSelected)="handleArticleSelected($event)"></app-article-list>
+</div>
+
+<div *ngIf="article">
+  <app-article-details [article]="article"></app-article-details>
+</div>
+

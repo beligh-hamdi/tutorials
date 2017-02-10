@@ -1,0 +1,15 @@
+<div class="flex-container"
+     fxLayout="row"
+     fxLayout.xs="column"
+     fxLayoutAlign="start"
+     fxLayoutAlign.xs="start">
+
+  <div *ngFor="let article of articles" class="flex-item" fxFlex="50%" fxFlex.xs="100%">
+    <md-card (click)="onSelectArticle(article)">
+      <md-card-content>
+        <p>{{ article.title }}</p>
+        <p>{{ article.description }}</p>
+      </md-card-content>
+    </md-card>
+  </div>
+</div>

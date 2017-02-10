@@ -28,6 +28,11 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { EbookComponent } from './containers/ebooks/components/ebook/ebook.component';
 import { EbookListComponent } from './containers/ebooks/components/ebook-list/ebook-list.component';
 import { EbookDetailsComponent } from './containers/ebooks/components/ebook-details/ebook-details.component';
+import { ArticlesComponent } from './containers/articles/articles.component';
+import { ArticleDetailsComponent } from './containers/articles/components/article-details/article-details.component';
+import { ArticleListComponent } from './containers/articles/components/article-list/article-list.component';
+import { ArticlesService } from "./shared/services/articles.service";
+
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -44,7 +49,10 @@ export function createTranslateLoader(http: Http) {
     SideNavComponent,
     EbookComponent,
     EbookListComponent,
-    EbookDetailsComponent
+    EbookDetailsComponent,
+    ArticlesComponent,
+    ArticleDetailsComponent,
+    ArticleListComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +72,8 @@ export function createTranslateLoader(http: Http) {
     })
   ],
   providers: [
-      EbooksService
+      EbooksService,
+      ArticlesService
   ],
   bootstrap: [AppComponent]
 })

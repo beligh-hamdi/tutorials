@@ -1,0 +1,8 @@
+{
+  "id": 3,
+  "title": "Angular",
+  "categories": ["Web", "JavaScript"],
+  "img": "assets/data/articles/3.jpg",
+  "description": "Angular",
+  "body": "Angular"
+}

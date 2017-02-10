@@ -3,19 +3,25 @@ import {Http, Response} from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
-import {Ebook} from "../models/ebook";
+import {Article} from "../models/article";
 
 @Injectable()
-export class EbooksService {
+export class ArticlesService {
 
-  apiPath: string = 'assets/data/ebooks';
+  apiPath: string = 'assets/data/articles';
 
   constructor(private http:Http) { }
 
-  getAll(): Observable<Array<Ebook>>{
-    return this.http.get(`${this.apiPath}/ebooks.json`)
-        .map((res: Response) => res.json().ebooks)
-        .catch(this.handleError);
+  getAll(): Observable<Array<Article>>{
+    return this.http.get(`${this.apiPath}/articles.json`)
+      .map((res: Response) => res.json().articles)
+      .catch(this.handleError);
+  }
+
+  get(id): Observable<Article>{
+    return this.http.get(`${this.apiPath}/${id}.json`)
+      .map((res: Response) => res.json())
+      .catch(this.handleError);
   }
 
   private handleError (error: Response | any) {

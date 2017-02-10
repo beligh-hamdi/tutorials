@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,9 @@ export class AppComponent implements OnInit {
   links:Array<any>;
 
 
+  constructor(private _location: Location){}
+
+
   ngOnInit() {
     this.title = 'Tutorials App';
 
@@ -18,7 +22,14 @@ export class AppComponent implements OnInit {
       {title: 'ABOUT', path: '/about'},
       {title: 'EBOOKS', path: '/ebooks'}
     ];
+  }
 
+  backClicked() {
+    this._location.back();
+  }
+
+  forwardClicked() {
+    this._location.forward();
   }
 
 
