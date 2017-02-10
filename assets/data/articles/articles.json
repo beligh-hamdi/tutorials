@@ -1,0 +1,31 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "CSS Font Icons",
+      "categories": ["Web"],
+      "img": "assets/data/articles/1.jpg",
+      "description": "CSS Font Icons",
+      "date":"10-02-2017",
+      "active": true
+    },
+    {
+      "id": 2,
+      "title": "AngularJS",
+      "categories": ["Web","JavaScript"],
+      "img": "assets/data/articles/2.jpg",
+      "description": "AngularJS",
+      "date":"10-02-2017",
+      "active": true
+    },
+    {
+      "id": 3,
+      "title": "Angular",
+      "categories": ["Web", "JavaScript"],
+      "img": "assets/data/articles/2.jpg",
+      "description": "Angular",
+      "date":"10-02-2017",
+      "active": true
+    }
+  ]
+}
